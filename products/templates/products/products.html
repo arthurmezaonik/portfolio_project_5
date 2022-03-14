@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/products/products.css' %}">
+{% endblock %}
+
+{% block extra_title %}Products {% if collection %}- {{collection.friendly_name}}{% endif %}{% endblock %}
+
+{% block content %}
+<main>
+    <div class="container-fluid fix__position">
+        <h1 class="text__captal page__header">
+            Products {% if collection %}- {{collection.friendly_name}}{% endif %}
+        </h1>
+        <div class="product__grid container">
+            <div class="row">
+                {% for product in products %}
+                    <div class="col-6 col-md-4 col-lg-3 ">
+                        {% include 'products/includes/product-card.html'%}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

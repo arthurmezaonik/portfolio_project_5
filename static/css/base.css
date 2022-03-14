@@ -4,7 +4,7 @@
 }
 
 .text__green{
-    color:#69b64f !important;
+    color:#538f3f !important;
 }
 
 .text__black{
@@ -27,13 +27,11 @@
 
 /* POSITION */
 .fix__position{
-    height: calc(100vh - 100px);
     margin-top:74px;
 }
 
 @media only screen and (min-width:992px){
     .fix__position{
-        height: calc(100vh - 168px);
         margin-top:112px;
     }
 }
@@ -65,8 +63,8 @@
 }
 
 .navbar-light .navbar-toggler{
-    border-color: #69b64f;
-    color: #69b64f;
+    border-color: #538f3f;
+    color: #538f3f;
 }
 
 @media only screen and (min-width:768px){
@@ -90,7 +88,5 @@
 
 /* FOOTER */
 .footer{
-    position: fixed;
-    bottom: 0;
     background-color: #ffa500;
 }

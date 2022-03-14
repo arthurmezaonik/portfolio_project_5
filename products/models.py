@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.validators import MinValueValidator
 
 
 class Collection(models.Model):
@@ -24,7 +25,10 @@ class Product(models.Model):
     title = models.CharField(max_length=254)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    calories = models.DecimalField(max_digits=6, decimal_places=2)
+    calories = models.IntegerField(
+        default=0,
+        validators=[MinValueValidator(0)]
+    )
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 

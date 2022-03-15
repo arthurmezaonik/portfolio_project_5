@@ -5,13 +5,23 @@
     <link rel="stylesheet" href="{% static 'css/products/products.css' %}">
 {% endblock %}
 
-{% block extra_title %}Products {% if collection %}- {{collection.friendly_name}}{% endif %}{% endblock %}
+{% block extra_title %}
+    {% if collection %}
+        - {{collection.friendly_name}} Products 
+    {% else %}
+        - All Products
+    {% endif %}
+{% endblock %}
 
 {% block content %}
 <main>
     <div class="container-fluid fix__position">
         <h1 class="text__captal page__header">
-            Products {% if collection %}- {{collection.friendly_name}}{% endif %}
+            {% if collection %}
+                {{collection.friendly_name}} Products 
+            {% else %}
+                All Products
+            {% endif %}
         </h1>
         <div class="product__grid container">
             <div class="row">

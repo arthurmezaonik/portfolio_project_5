@@ -7,7 +7,7 @@
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
                 <a href="#" class="dropdown-item">By Price</a>
                 <a href="#" class="dropdown-item ">By Collection</a>
-                <a href="#" class="dropdown-item">All Products</a>
+                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
 
@@ -16,12 +16,12 @@
                 Collections
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="collections-link">
-                <a href="#" class="dropdown-item">Appetizer</a>
-                <a href="#" class="dropdown-item">Beef</a>
-                <a href="#" class="dropdown-item">Chicken</a>
-                <a href="#" class="dropdown-item">Fish</a>
-                <a href="#" class="dropdown-item">Pork</a>
-                <a href="#" class="dropdown-item">Vegan</a>
+                <a href="{% url 'products' %}?collection=appetizer" class="dropdown-item">Appetizer</a>
+                <a href="{% url 'products' %}?collection=main_beef" class="dropdown-item">Beef</a>
+                <a href="{% url 'products' %}?collection=main_chicken" class="dropdown-item">Chicken</a>
+                <a href="{% url 'products' %}?collection=main_fish" class="dropdown-item">Fish</a>
+                <a href="{% url 'products' %}?collection=main_pork" class="dropdown-item">Pork</a>
+                <a href="{% url 'products' %}?collection=main_vegan" class="dropdown-item">Vegan</a>
             </div>
         </li>
 

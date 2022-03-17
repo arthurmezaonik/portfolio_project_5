@@ -1,10 +1,23 @@
 .page__header{
     text-align: center;
+    margin:0;
 }
 
 .product__grid{
     max-width: 1200px;
     padding: 30px 10px;
+}
+
+.products__filter{
+    margin: 0 auto;
+}
+
+.custom-select{
+    width: 100%;
+}
+
+.products__counter{
+    text-align: center;
 }
 
 .product__card{
@@ -38,6 +51,7 @@
     margin-bottom: 2px;
 }
 
+.product__collection,
 .product__calories{
     font-size: 10px;
     margin-bottom: 5px;
@@ -63,12 +77,25 @@
         font-size: 20px;
     }
 
+    .product__collection,
     .product__calories{
         font-size: 12px;
+    }
+
+    .products__filter{
+        margin: 0;
+    }
+
+    .products__counter{
+        text-align: right;
     }
 }
 
 @media only screen and (min-width:992px){
+    .products__container{
+        padding-top:30px;
+    }
+
     .product__grid{
         padding: 30px 30px;
     }

@@ -1,5 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Product, Collection
+from django.db.models.functions import Lower
+
 
 # Create your views here.
 def all_products(request):
@@ -7,16 +9,36 @@ def all_products(request):
 
     products = Product.objects.all()
     collection = None
+    sort = None
+    direction = None
 
     if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                products = products.annotate(lower_name=Lower('title'))
+            if sortkey == 'collection':
+                sortkey = 'collection__name'
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+
+            products = products.order_by(sortkey)
+
         if "collection" in request.GET:
             requested_collection = request.GET["collection"]
-            products = products.filter(collections__name=requested_collection)
+            products = products.filter(collection__name=requested_collection)
             collection = Collection.objects.filter(name=requested_collection)[0]
+
+    current_sorting = f'{sort}_{direction}'
 
     context = {
         'products': products,
         'collection': collection,
+        'current_sorting': current_sorting,
     }
 
     return render(request, 'products/products.html', context)

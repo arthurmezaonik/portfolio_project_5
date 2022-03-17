@@ -15,8 +15,8 @@
 
 {% block content %}
 <main>
-    <div class="container-fluid fix__position">
-        <h1 class="text__captal page__header">
+    <div class="container-fluid fix__position products__container">
+        <h1 class="text__captal page__header text__orange">
             {% if collection %}
                 {{collection.friendly_name}} Products 
             {% else %}
@@ -24,6 +24,29 @@
             {% endif %}
         </h1>
         <div class="product__grid container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="sort-select-wrapper w-50 products__filter">
+                        <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                            <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                            <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                            <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                            <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                            <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                            <option value="collection_asc" {% if current_sorting == 'collection_asc' %}selected{% endif %}>Collection (A-Z)</option>
+                            <option value="collection_desc" {% if current_sorting == 'collection_desc' %}selected{% endif %}>Collection (Z-A)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <p class="products__counter">
+                        {% if current_sorting != 'None_None' %}
+                            <span class="small"><a href="{% url 'products' %}">All Products</a> | </span>
+                        {% endif %}
+                        {{ products|length }} Products
+                    </p>
+                </div>
+            </div>
             <div class="row">
                 {% for product in products %}
                     <div class="col-6 col-md-4 col-lg-3 ">
@@ -34,4 +57,36 @@
         </div>
     </div>
 </main>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+		$('.btt-link').click(function(e) {
+			window.scrollTo(0,0)
+		})
+	</script>
+    
+    <script type="text/javascript">
+        $('#sort-selector').change(function() {
+            var selector = $(this);
+            var currentUrl = new URL(window.location);
+
+            var selectedVal = selector.val();
+            if(selectedVal != "reset"){
+                var sort = selectedVal.split("_")[0];
+                var direction = selectedVal.split("_")[1];
+
+                currentUrl.searchParams.set("sort", sort);
+                currentUrl.searchParams.set("direction", direction);
+
+                window.location.replace(currentUrl);
+            } else {
+                currentUrl.searchParams.delete("sort");
+                currentUrl.searchParams.delete("direction");
+
+                window.location.replace(currentUrl);
+            }
+        })
+    </script>
 {% endblock %}

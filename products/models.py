@@ -15,7 +15,7 @@ class Collection(models.Model):
 
 
 class Product(models.Model):
-    collections = models.ForeignKey(
+    collection = models.ForeignKey(
         'Collection',
         null=True,
         blank=True,

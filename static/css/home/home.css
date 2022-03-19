@@ -2,7 +2,7 @@
     background: url('/media/home.jpg') no-repeat center center fixed;
     background-size: cover;
     position: relative;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 130px);
 }
 
 .home-text__container{    

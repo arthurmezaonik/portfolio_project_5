@@ -104,3 +104,118 @@
         font-size: 25px;
     }
 }
+
+/* SPECIFIC PRODUCTS */
+.specific__product-container{
+    padding-top:20px;
+}
+
+.specific__img-container{
+    text-align: center;
+}
+
+.specific__img-container img{
+    width: 100%;
+    object-fit: cover;
+    max-width: 300px;
+}
+
+.specific__product-title{
+    margin-bottom: 0;
+    font-size: 30px;
+}
+
+.specific__product-calories{
+    margin-bottom:0;
+}
+
+.specific__product-price{
+    margin-bottom:0;
+    margin-top: 15px;
+    font-size: 26px;
+}
+
+.specific__product-collection{
+    text-decoration:none;
+}
+
+.specific__product-description{
+    margin-top:15px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+/* form */
+.specific__form p{
+    margin-bottom:3px
+}
+
+.btn.text__white{
+    background-color: black;
+}
+
+.qty_input{
+    text-align: center;
+}
+
+.form__submit-btns .col,
+.form__submit-btns .col-6{
+    text-align: center;
+}
+
+.form__submit-btns .bag,
+.form__submit-btns .checkout{
+    background-color: orange;
+    width: 100%;
+}
+
+.form__submit-btns .bag:hover,
+.form__submit-btns .checkout:hover{
+    background-color: #ffa50075;
+    color: black !important;
+}
+
+.form__submit-btns .keep-shopping{
+    background: #69b64f;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+}
+
+.form__submit-btns .keep-shopping:hover{
+    background-color: #69b64f73;
+    color: black !important;
+}
+
+@media screen and (min-width:768px){
+    .specific__img-container img{
+        max-width: 350px;
+    }
+}
+
+@media screen and (min-width:992px){
+    .specific__img-container{
+        text-align: right;
+    }
+    
+    .specific__img-container img{
+        max-width: 450px;
+    }
+    
+    .specific__product-title{
+        font-size: 40px;
+    }
+
+    .specific__product-price{
+        font-size: 34px;
+    }
+
+    .specific__product-description{
+        font-size: 26px;
+    }
+
+    /* form */
+    .specific__form{
+        max-width:456px;
+    }
+}

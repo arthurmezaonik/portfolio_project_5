@@ -40,8 +40,8 @@
                 </div>
                 <div class="col-12 col-md-6">
                     <p class="products__counter">
-                        {% if current_sorting != 'None_None' %}
-                            <span class="small"><a href="{% url 'products' %}">All Products</a> | </span>
+                        {% if current_sorting != 'None_None' or collection %}
+                            <span class="small"><a href="{% url 'products' %}">Clear Filters</a> | </span>
                         {% endif %}
                         {{ products|length }} Products
                     </p>

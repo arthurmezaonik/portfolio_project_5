@@ -28,7 +28,7 @@ class ReviewAdmin(admin.ModelAdmin):
     list_display = (
         'name',
         'body',
-        'post',
+        'product',
         'created_on',
         'approved'
     )

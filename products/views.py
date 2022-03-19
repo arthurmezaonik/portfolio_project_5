@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Product, Collection
+from .models import Product, Collection, Review
 from django.db.models.functions import Lower
 
 
@@ -48,9 +48,11 @@ def specific_product(request, product_id):
     """A view to render a specific product"""
 
     product = get_object_or_404(Product, pk=product_id)
+    reviews = Review.objects.filter(product=product_id)
 
     context = {
         'product': product,
+        'reviews': reviews,
     }
 
     return render(request, 'products/specific_product.html', context)

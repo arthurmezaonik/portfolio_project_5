@@ -11,6 +11,10 @@
     color:black !important;
 }
 
+.text__white{
+    color:white !important;
+}
+
 /* FONT WEIGHT */
 .text__bold{
     font-weight: bold;
@@ -88,7 +92,7 @@
 
 /* MAIN */
 main{
-    min-height: calc(100vh - 100px);;
+    min-height: calc(100vh - 130px);;
 }
 
 @media only screen and (min-width:992px){

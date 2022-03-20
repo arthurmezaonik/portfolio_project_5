@@ -49,6 +49,7 @@
 .product__title{
     font-size: 16px;
     margin-bottom: 2px;
+    min-height: 39px;
 }
 
 .product__collection,
@@ -75,6 +76,7 @@
 
     .product__title{
         font-size: 20px;
+        min-height: 48px;
     }
 
     .product__collection,
@@ -102,12 +104,14 @@
 
     .product__title{
         font-size: 25px;
+        min-height: 60px;
     }
 }
 
 /* SPECIFIC PRODUCTS */
 .specific__product-container{
     padding-top:20px;
+    margin-bottom:20px;
 }
 
 .specific__img-container{
@@ -143,6 +147,12 @@
     margin-top:15px;
     margin-bottom: 15px;
     font-size: 20px;
+}
+
+.break__line{
+    max-width: 1036px;
+    margin: 0 auto;
+    height: 3px;
 }
 
 /* form */
@@ -218,4 +228,28 @@
     .specific__form{
         max-width:456px;
     }
+}
+
+/* Reviews */
+.review__container{
+    max-width: 1036px;
+    padding: 15px 10px;
+}
+
+.review__title{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.review{
+    padding:10px;
+    border-bottom: 1px solid #8080803d;
+}
+
+.review__orange-bg{
+    background-color: #ffa50075;
+}
+
+.review p{
+    margin: 0;
 }

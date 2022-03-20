@@ -91,15 +91,26 @@
             </div>
         </div>
         
-        {% if reviews %}
-            <div class="row review__container ">
+        <hr class="break__line text__orange">
+
+        <div class="container review__container">
+            {% if reviews %}
+                <h3 class="review__title">{{product.title}} - Reviews</h3>
                 {% for review in reviews %}
-                    {% if review.approved%}
-                        <p>{{review.body}}</p>
+                    {% if forloop.counter|divisibleby:2 %}
+                    <div class="row review">
+                    {% else %}
+                    <div class="row review review__orange-bg">
                     {% endif %}
+                        {% if review.approved%}
+                            {% include 'products/includes/review-content.html'%}
+                        {% endif %}
+                    </div>
                 {% endfor %}
-            </div>
-        {% endif %}
+            {% else %}
+                <h3 class="review__title">This Product Has No Reviews</h3>
+            {% endif %}
+        </div>
     </div>
 </main>
 {% endblock %}

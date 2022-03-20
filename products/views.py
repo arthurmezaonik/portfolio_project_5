@@ -3,6 +3,7 @@ from .models import Product, Collection, Review
 from django.db.models.functions import Lower
 
 
+
 # Create your views here.
 def all_products(request):
     """A view to render a list with all the products"""
@@ -53,6 +54,7 @@ def specific_product(request, product_id):
     context = {
         'product': product,
         'reviews': reviews,
+
     }
 
     return render(request, 'products/specific_product.html', context)

@@ -253,3 +253,13 @@
 .review p{
     margin: 0;
 }
+
+.form__review{
+    text-align: center;
+    margin: 20px 0;
+}
+
+.review__box{
+    width: 100%;
+    max-width: 1040px;
+}

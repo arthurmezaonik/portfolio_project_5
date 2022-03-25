@@ -94,24 +94,43 @@
         <hr class="break__line text__orange">
 
         <div class="container review__container">
-            {% if reviews %}
-                <h3 class="review__title">{{product.title}} - Reviews</h3>
-                {% for review in reviews %}
-                    {% if forloop.counter|divisibleby:2 %}
-                    <div class="row review">
+            <div class="customer__reviews">
+                {% if reviews %}
+                    <h3 class="review__title">{{product.title}} - Reviews</h3>
+                        {% for review in reviews %}
+                            {% if review.approved%}
+                                {% if forloop.counter|divisibleby:2 %}
+                                    <div class="row review">
+                                 {% else %}
+                                    <div class="row review review__orange-bg">
+                                {% endif %}
+                                        {% include 'products/includes/review-content.html'%}
+                                    </div>
+                            {% endif %}
+                        {% endfor %}
+                {% else %}
+                    <h3 class="review__title">This Product Has No Reviews</h3>
+                {% endif %}
+            </div>
+
+
+            <div class="form__review">
+                {% if reviewed %}
+                    <p>Review Submitted. Your review will be verified before approval.</p>
+                {% else %}
+                    {% if request.user.is_authenticated %}
+                        <form action="" method="POST">
+                            {% csrf_token%}
+
+                            {{ review_form.as_p }}
+                            <input type="submit" value="Submit" class="btn text__bold text__white keep-shopping rounded-0 mt-1">
+                        </form>
                     {% else %}
-                    <div class="row review review__orange-bg">
+                        <p>Sorry, but you need to be registered to give us a review. <a href="{% url 'account_signup' %}" title='Sign up page'>Sign up here</a>.</p>
                     {% endif %}
-                        {% if review.approved%}
-                            {% include 'products/includes/review-content.html'%}
-                        {% endif %}
-                    </div>
-                {% endfor %}
-            {% else %}
-                <h3 class="review__title">This Product Has No Reviews</h3>
-            {% endif %}
+                {% endif %}
+            </div>
         </div>
-    </div>
 </main>
 {% endblock %}
 

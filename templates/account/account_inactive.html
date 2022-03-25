@@ -1,11 +1,18 @@
-{% extends "account/base.html" %}
+{% extends "base.html" %}
+{% load static %}
 
 {% load i18n %}
 
-{% block head_title %}{% trans "Account Inactive" %}{% endblock %}
+{% block extra_title %}
+  - Account Inactive
+{% endblock %}
 
 {% block content %}
-<h1>{% trans "Account Inactive" %}</h1>
+<main>
+    <div class="container-fluid fix__position">
+        <h1>{% trans "Account Inactive" %}</h1>
 
-<p>{% trans "This account is inactive." %}</p>
+        <p>{% trans "This account is inactive." %}</p>
+    </div>
+</main>
 {% endblock %}

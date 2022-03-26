@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.db.models.functions import Lower
 from .models import Post
 
@@ -31,3 +31,14 @@ def blog(request):
     }
 
     return render(request, 'blog/all_posts.html', context)
+
+
+def specific_post(request, slug):
+    """A view to render a specific blog post"""
+    post = get_object_or_404(Post, slug=slug)
+
+    context = {
+        'post': post
+    }
+
+    return render(request, 'blog/specific_post.html', context)

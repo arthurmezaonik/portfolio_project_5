@@ -8,6 +8,10 @@
     padding: 30px 10px;
 }
 
+.posts__filter{
+    margin-bottom:10px;
+}
+
 .draft__opacity{
     opacity:0.5;
 }

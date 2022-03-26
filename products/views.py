@@ -1,8 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect
+from django.db.models.functions import Lower
 from .models import Product, Collection, Review
 from .forms import ReviewForm
-from django.db.models.functions import Lower
 
 
 # Create your views here.

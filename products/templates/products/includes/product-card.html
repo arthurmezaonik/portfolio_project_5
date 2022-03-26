@@ -9,9 +9,9 @@
     <a href="{% url 'specific_product' product.id %}" title="{{ product.title }}" class="product__text text__black">
         <h2 class="product__title text__captal">{{ product.title }}</h2>
         {% if product.collection %}
-            <p class="product__collection"><i class="fa-solid fa-tag"></i> {{ product.collection.friendly_name }}</p>
+            <p class="product__collection"><i class="fas fa-tags"></i> {{ product.collection.friendly_name }}</p>
         {% else %}
-            <p class="product__collection"><i class="fa-solid fa-tag"></i> No Collection</p>
+            <p class="product__collection"><i class="fas fa-tags"></i> No Collection</p>
         {% endif %}
         <p class="product__calories">{{product.calories}} cal</p>
         <p class="product__price">${{product.price}}</p>

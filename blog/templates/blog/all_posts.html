@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    
+{% endblock %}
+
+{% block extra_title %}
+    - Blog Posts
+{% endblock %}
+
+{% block content %}
+<main>
+    <div class="container-fluid fix__position posts__container">
+        <h1 class="text__captal page__header text__orange">
+            Blog Posts
+        </h1>
+        <div class="posts__grid container">
+            <div class="row">
+                {% for post in posts %}
+                    <div class="col-6 col-md-4 col-lg-3 ">
+                        {{post.title}}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+{% endblock %}

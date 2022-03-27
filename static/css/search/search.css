@@ -1,0 +1,36 @@
+.searched{
+    max-width: 1200px;
+    width: 100%;
+    margin:0 auto;
+    text-align: center;
+}
+
+.product__grid,
+.posts__grid{
+    margin:0 auto;
+}
+
+.product__grid h2,
+.posts__grid h2{
+    padding:0;
+}
+
+.break__line{
+    max-width: 1200px;
+}
+
+@media only screen and (min-width:768px){
+    .searched{
+        padding:0 20px;
+    }
+}
+
+@media only screen and (min-width:992px){
+    .search__container{
+        padding-top:30px;
+    }
+
+    .searched{
+        padding:0 30px;
+    }
+}

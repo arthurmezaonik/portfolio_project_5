@@ -43,7 +43,7 @@
     </div>
     <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
         <div class="container-fluid">
-            <form class="d-flex">
+            <form action="{% url 'search' %}" method="post" class="d-flex">
                 {% csrf_token %}
                 <input class="form-control me-2" type="search" name="q" placeholder="Search" aria-label="Search">
                 <button class="btn text__orange" type="submit">

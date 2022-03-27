@@ -1,0 +1,19 @@
+<div class="post__card">
+    <div class="post__image-container">
+        {%if post.featured_image %}
+            <img src="{{ post.featured_image.url }}" alt="{{ post.title }}">
+        {% else %}
+            <img src="/media/blog_image.jpg" alt="{{ post.title }}">
+        {% endif %}
+    </div>
+    <a href="{% url 'post' post.slug %}" title="{{ post.title }}" class="post__text text__black">
+        <h2 class="post__title text__captal">{{ post.title }}</h2>
+        {% if post.excerpt != "" %}
+            <p class="post__excerpt">{{ post.excerpt }}</p>
+        {% else %}
+            <div class="post__excerpt">{{ post.content | truncatewords_html:30 | safe}}</div>
+        {% endif %}
+        <p class="post__author"><i class="fas fa-user"></i> {{post.author}}</p>
+        <p class="post__publication"><i class="fas fa-calendar"></i> {{post.created_on}}</p>
+    </a>
+</div>

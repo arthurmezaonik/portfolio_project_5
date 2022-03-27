@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/products/products.css' %}">
+    <link rel="stylesheet" href="{% static 'css/blog/blog.css' %}">
+    <link rel="stylesheet" href="{% static 'css/search/search.css' %}">
+{% endblock %}
+
+{% block extra_title %}
+    Search Page
+{% endblock %}
+
+{% block content %}
+<main>
+    <div class="container-fluid fix__position search__container">
+        <h1 class="text__captal page__header text__orange">
+            Search Page
+        </h1>
+
+        {% if searched %}
+            <p class="searched"><strong>Searched Term</strong>: {{searched | capfirst }}</p>
+        {% else %}
+            <p class="searched">You didn't make any serch</p>
+        {% endif %}
+
+        {% if searched %}
+            {% if products %}
+                <div class="row product__grid">
+                    <h2>Products:</h2>
+                    {% for product in products %}
+                        <div class="col-6 col-md-4 col-lg-3 ">
+                            {% include 'search/includes/search-product-card.html'%}
+                        </div>
+                    {% endfor %}
+                </div>
+
+                {% if posts %}
+                    <hr class="break__line text__orange">
+                {% endif %}
+            {% endif %}
+
+            {% if posts %}
+                <div class="row posts__grid">
+                    <h2>Blog Posts:</h2>
+                    {% for post in posts %}
+                        {% if post.status == 1%}
+                            <div class="col-6 col-md-4 col-lg-3 ">
+                                {% include 'search/includes/search-post-card.html'%}
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endif %}
+    </div>
+</main>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+{% endblock %}

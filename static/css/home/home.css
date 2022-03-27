@@ -2,7 +2,7 @@
     background: url('/media/home.jpg') no-repeat center center fixed;
     background-size: cover;
     position: relative;
-    height: calc(100vh - 130px);
+    height: calc(100vh - 194px);
 }
 
 .home-text__container{    
@@ -61,6 +61,10 @@
 }
 
 @media only screen and (min-width:768px){
+    .home{
+        height: calc(100vh - 136px);
+    }
+
     .shop__btn {
         font-size: 25px;
     }

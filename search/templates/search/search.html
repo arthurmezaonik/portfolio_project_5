@@ -21,7 +21,7 @@
         {% if searched %}
             <p class="searched"><strong>Searched Term</strong>: {{searched | capfirst }}</p>
         {% else %}
-            <p class="searched">You didn't make any serch</p>
+            <p class="searched">You didn't make any serch.</p>
         {% endif %}
 
         {% if searched %}
@@ -44,6 +44,11 @@
                 <div class="row posts__grid">
                     <h2>Blog Posts:</h2>
                     {% for post in posts %}
+                        {% if request.user.is_superuser and post.status == 0%}
+                            <div class="col-6 col-md-4 col-lg-3 draft__opacity">
+                                {% include 'search/includes/search-post-card.html'%}
+                            </div>
+                        {% endif %}
                         {% if post.status == 1%}
                             <div class="col-6 col-md-4 col-lg-3 ">
                                 {% include 'search/includes/search-post-card.html'%}
@@ -52,6 +57,10 @@
                     {% endfor %}
                 </div>
             {% endif %}
+
+            {% if not products and not posts%}
+                <p class="no_result">Sorry, your search resulted in 0 products or blog posts.</p>
+            {%endif%}
         {% endif %}
     </div>
 </main>

@@ -4,9 +4,9 @@ from products.models import Product
 
 
 def search(request):
-    """Return searched publications"""  
-    if request.method == "POST":
-        searched = request.POST['q']
+    """Return searched publications"""
+    if request.method == "GET":
+        searched = request.GET['q']
         products = Product.objects.filter(
             title__icontains=searched) | Product.objects.filter(
                 description__icontains=searched

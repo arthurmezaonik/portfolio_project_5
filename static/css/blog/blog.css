@@ -66,6 +66,12 @@
     margin-bottom: 0px;
 }
 
+@media only screen and (max-width:425px){
+    .post__publication{
+        height: 30px;
+    }
+}
+
 @media only screen and (min-width:768px){
     .post__grid{
         padding: 30px 20px;

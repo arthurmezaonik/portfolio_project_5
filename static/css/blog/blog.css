@@ -105,3 +105,143 @@
         min-height: 60px;
     }
 }
+
+/* Specific Post */
+.specific-post__inner-container{
+    max-width: 1000px;
+    width: 100%;
+    margin:0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.specific-post__header-container{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.specific-post__title-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+.specific-post__title{
+    padding:10px 15px;
+    background-color: #0000008a
+}
+
+.specific-post__title > h1 {
+    color:white;
+}
+
+.specific-post__image-container{
+    position: absolute;
+    top:0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    padding: 0;
+}
+
+.specific-post__image{
+    height: 100%;
+    width: 100%;
+}
+
+.specific-post__image > img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.specific-post__info-container{
+    width: 100%;
+    padding: 0;
+    margin: 5px 0 0;
+    display: flex;
+}
+
+.specific-post__author,
+.specific-post__published{
+    font-size: 12px;
+    padding: 0;
+}
+
+.post__content-container{
+    width: 100%;
+    padding: 0;
+    margin-top:20px;
+}
+
+.post__content-container h2{
+    font-size: 20px;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.post__content-container p{
+    font-size: 16px;
+    margin-bottom:5px;
+    padding: 0;
+}
+
+
+@media only screen and (min-width:768px){
+    .specific-post__header-container{
+        aspect-ratio: 16/6;
+    }
+
+    .specific-post__title > h1 {
+        font-size: 38px;
+    }
+
+    .specific-post__author,
+    .specific-post__published{
+        font-size: 16px;
+    }
+
+    .post__content-container h2{
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .post__content-container p{
+        font-size: 20px;
+        margin-bottom:7px;
+    }
+}
+
+@media only screen and (min-width:992px){
+    .specific-post__outer-container{
+        padding-top:20px;
+    }
+    
+    .specific-post__title > h1 {
+        font-size: 40px;
+    }
+
+    .specific-post__author,
+    .specific-post__published{
+        font-size: 18px;
+    }
+
+    .post__content-container h2{
+        font-size: 26px;
+    }
+
+    .post__content-container p{
+        font-size: 22px;
+    }
+}
+
+
+

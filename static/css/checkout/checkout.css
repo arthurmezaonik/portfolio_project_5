@@ -35,6 +35,13 @@ select option[value=""] {
     color: #aab7c4 !important;
 }
 
+@media only screen and (min-width:992px){
+    .checkout__container{
+        padding-top:30px;
+    }
+}
+
+/* Loading screen */
 #loading-overlay {
 	display: none;
 	position: fixed;
@@ -52,12 +59,6 @@ select option[value=""] {
     justify-content: center;
     margin: 0;
     height: 100%;
-}
-
-@media only screen and (min-width:992px){
-    .checkout__container{
-        padding-top:30px;
-    }
 }
 
 /* Stripe elements CSS */

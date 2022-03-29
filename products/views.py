@@ -1,5 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, HttpResponse
 from django.http import HttpResponseRedirect
+from django.contrib import messages
 from django.db.models.functions import Lower
 from .models import Product, Collection, Review
 from .forms import ReviewForm
@@ -56,17 +57,23 @@ def specific_product(request, product_id):
     reviews = Review.objects.filter(product=product_id)
 
     if request.method == 'POST':
-        review_form = ReviewForm(request.POST)
-        if review_form.is_valid():
-            review_form.instance.email = request.user.email
-            review_form.instance.name = request.user.username
-            review = review_form.save(commit=False)
-            review.product = product
-            review.save()
+        try:
+            review_form = ReviewForm(request.POST)
+            if review_form.is_valid():
+                review_form.instance.email = request.user.email
+                review_form.instance.name = request.user.username
+                review = review_form.save(commit=False)
+                review.product = product
+                review.save()
 
-            return HttpResponseRedirect(
-                f'{product_id}?reviewed=True'
-            )
+                messages.success(request, 'Review submitted')
+                return HttpResponseRedirect(
+                    f'{product_id}?reviewed=True'
+                )
+        except Exception as e:
+            messages.error(request, f'Error submitting your review: {e}')
+            return HttpResponse(status=500)
+
     else:
         review_form = ReviewForm()
         if "reviewed" in request.GET:

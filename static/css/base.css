@@ -113,7 +113,7 @@
 .message-container {
     position: fixed;
     top: 72px;
-    left: 40px;
+    left: 15px;
     z-index: 99999999999;
     max-width: 90%;
 }
@@ -130,6 +130,18 @@
     height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+@media only screen and (min-width:992px){
+    .message-container {
+        left: 40px;
+    } 
+}
+
+@media only screen and (min-width:2560px){
+    .message-container {
+        left: 25%;
+    } 
 }
 
 /* MAIN */

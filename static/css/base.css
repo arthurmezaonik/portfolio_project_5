@@ -113,8 +113,9 @@
 .message-container {
     position: fixed;
     top: 72px;
-    right: 15px;
+    left: 40px;
     z-index: 99999999999;
+    max-width: 90%;
 }
 
 .custom-toast {
@@ -123,6 +124,12 @@
 
 .toast-capper {
     height: 2px;
+}
+
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 /* MAIN */

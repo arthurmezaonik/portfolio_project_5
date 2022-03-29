@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/bag/bag.css' %}">
+{% endblock %}
+
+{% block extra_title %}
+    - Shopping Bag
+{% endblock %}
+
+{% block content %}
+<main>
+    <div class="container-fluid fix__position home">
+        <div class="row">
+            <div class="col">
+                <h1 class="text__captal page__header text__orange">
+                    Shopping Bag
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                {% if bag_items %}
+                    <div class="table-responsive rounded"></div>
+                {% else %}
+                    <p>Your bag is empty</p>
+                    <a href="{% url 'products' %}" class="btn text__bold text__white keep-shopping rounded-0 mt-1">
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span class="text__upper">Keep Shopping</span>
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

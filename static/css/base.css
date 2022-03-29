@@ -85,6 +85,10 @@
     padding-left: 0;
 }
 
+.mobile__icon .nav-link.bag__icon{
+    padding-left: 0.5rem;
+}
+
 @media only screen and (min-width:768px){
     .logo__img{
         width: 40px;
@@ -102,6 +106,23 @@
         padding-top: 0;
         padding-bottom: 0;
     }
+}
+
+/* Bootstrap Toasts */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
 }
 
 /* MAIN */

@@ -46,15 +46,13 @@
                     {% if comments %}
                         <h3 class="comment__title"><span class='text__captal'>{{post.title}}</span> - Comments</h3>
                             {% for comment in comments %}
-                                {% if comment.approved %}
-                                    {% if forloop.counter|divisibleby:2 %}
-                                        <div class="row comment">
-                                    {% else %}
-                                        <div class="row comment comment__orange-bg">
-                                    {% endif %}
-                                            {% include 'blog/includes/comment-content.html'%}
-                                        </div>
+                                {% if forloop.counter|divisibleby:2 %}
+                                    <div class="row comment">
+                                {% else %}
+                                    <div class="row comment comment__orange-bg">
                                 {% endif %}
+                                        {% include 'blog/includes/comment-content.html'%}
+                                    </div>
                             {% endfor %}
                     {% else %}
                         <h3 class="comment__title">This blog post has no comments</h3>
@@ -63,7 +61,7 @@
 
                 <div class="form__comment">
                     {% if commented %}
-                        <p>Comment Submitted. Your comment will be verified before approval.</p>
+                        <p>Comment Submitted.</p>
                     {% else %}
                         {% if request.user.is_authenticated %}
                             <form action="" method="POST">

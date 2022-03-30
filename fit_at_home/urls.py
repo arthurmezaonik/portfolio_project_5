@@ -16,6 +16,9 @@ urlpatterns = [
     path('user/', include('user.urls')),
     path('management/', include('management.urls')),
     path('newsletter/', include('newsletter.urls')),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler404 = 'home.views.error_404'

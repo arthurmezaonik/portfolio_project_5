@@ -133,7 +133,13 @@ def edit_post(request, post_id):
 
 def delete_post(request, post_id):
     """ Delete a post from the store """
-    post = get_object_or_404(Post, pk=post_id)
-    post.delete()
-    messages.success(request, 'Post deleted!')
-    return redirect(reverse('blog'))
+
+    if request.user.is_staff or request.user.is_superuser:
+        post = get_object_or_404(Post, pk=post_id)
+        post.delete()
+        messages.success(request, 'Post deleted!')
+        return redirect(reverse('blog'))
+
+    else:
+        messages.error(request, "You are not allowed in this area.")
+        return redirect(reverse('home'))

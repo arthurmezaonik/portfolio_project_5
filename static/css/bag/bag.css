@@ -6,6 +6,8 @@
 
 .product__image{
     width: 100%;
+    aspect-ratio: 0.72;
+    object-fit: cover;
 }
 
 .bag__item  td{

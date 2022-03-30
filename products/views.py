@@ -1,9 +1,9 @@
-from django.shortcuts import render, get_object_or_404, HttpResponse
+from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
 from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.db.models.functions import Lower
 from .models import Product, Collection, Review
-from .forms import ReviewForm
+from .forms import ReviewForm, ProductForm
 
 
 # Create your views here.
@@ -87,3 +87,27 @@ def specific_product(request, product_id):
     }
 
     return render(request, 'products/specific_product.html', context)
+
+
+def create_product(request):
+    """Create a new product"""
+
+    if request.user.is_staff or request.user.is_superuser:
+        if request.method == 'POST':
+            form = ProductForm(request.POST, request.FILES)
+            if form.is_valid():
+                product = form.save(commit=False)
+                product.save()
+                messages.success(request, 'Product created successfully!')
+                return redirect(reverse('create_product'))
+        else:
+            form = ProductForm()
+
+        context = {
+            'form': form,
+        }
+        return render(request, 'products/create_product.html', context)
+    
+    else:
+        messages.error(request, "You are not allowed in this area.")
+        return redirect(reverse('home'))

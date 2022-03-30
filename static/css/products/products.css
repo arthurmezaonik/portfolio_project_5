@@ -35,6 +35,8 @@
 
 .product__image-container > img{
     width: 100%;
+    aspect-ratio: 0.72;
+    object-fit: cover;
 }
 
 .product__text{
@@ -122,6 +124,7 @@
     width: 100%;
     object-fit: cover;
     max-width: 300px;
+    aspect-ratio: 0.72;
 }
 
 .specific__product-title{
@@ -262,4 +265,9 @@
 .review__box{
     width: 100%;
     max-width: 1040px;
+}
+
+/* Create Product */
+.products__container > .create__form{
+    justify-content: center;
 }

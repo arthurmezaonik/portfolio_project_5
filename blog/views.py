@@ -98,3 +98,34 @@ def create_post(request):
     else:
         messages.error(request, "You are not allowed in this area.")
         return redirect(reverse('home'))
+
+
+def edit_post(request, post_id):
+    """Edit a post"""
+
+    if request.user.is_staff or request.user.is_superuser:
+
+        post = get_object_or_404(Post, pk=post_id)
+
+        if request.method == 'POST':
+            form = PostForm(request.POST, request.FILES, instance=post)
+            if form.is_valid():
+                post = form.save(commit=False)
+                post.save()
+                messages.success(request, 'Post edited successfully!')
+                return redirect(reverse('post', args=[post.id]))
+            else:
+                messages.error(request, 'Failed to update the product.')
+
+        else:
+            form = PostForm(instance=post)
+
+        context = {
+            'form': form,
+            'post': post
+        }
+        return render(request, 'blog/edit_post.html', context)
+
+    else:
+        messages.error(request, "You are not allowed in this area.")
+        return redirect(reverse('home'))

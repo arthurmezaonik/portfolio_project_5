@@ -6,14 +6,14 @@
 {% endblock %}
 
 {% block extra_title %}
-    - Create Post
+    - Edit Post
 {% endblock %}
 
 {% block content %}
 <main>
     <div class="container-fluid fix__position posts__container">
         <h1 class="text__captal page__header text__orange">
-            Create Post
+            Edit Post
         </h1>
 
         <div class="row create__form">
@@ -23,7 +23,7 @@
                     {{ form | crispy }}
                     <div class="text-right">
                         <a class="btn text__bold text__white keep-shopping rounded-0 mt-1" href="{% url 'blog' %}">Cancel</a>
-                        <button class="btn text__bold text__white keep-shopping rounded-0 mt-1" type="submit">Add Post</button>
+                        <button class="btn text__bold text__white keep-shopping rounded-0 mt-1" type="submit">Edit Post</button>
                     </div>
                 </form>
             </div>            

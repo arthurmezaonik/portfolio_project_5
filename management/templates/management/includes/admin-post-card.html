@@ -6,7 +6,7 @@
             <img src="{{ MEDIA_URL }}blog_image.jpg" alt="{{ post.title }}">
         {% endif %}
     </div>
-    <a href="{% url 'post' post.slug %}" title="{{ post.title }}" class="post__text text__black">
+    <a href="{% url 'post' post.id %}" title="{{ post.title }}" class="post__text text__black">
         <h2 class="post__title text__captal">{{ post.title }}</h2>
         <p class="post__excerpt"><strong>Status:</strong> {% if post.status == 0%}Draft{% else %}Published{% endif %}</p>
         {% if post.excerpt != "" %}
@@ -18,7 +18,7 @@
         <p class="post__publication"><i class="fas fa-calendar"></i> {{post.created_on}}</p>
     </a>
 
-    <a href="#" class="settings">
+    <a href="{% url 'edit_post' post.id %}" class="settings">
         <i class="fa fa-gear"></i>
     </a>
 </div>

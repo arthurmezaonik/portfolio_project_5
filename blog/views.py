@@ -115,7 +115,7 @@ def edit_post(request, post_id):
                 messages.success(request, 'Post edited successfully!')
                 return redirect(reverse('post', args=[post.id]))
             else:
-                messages.error(request, 'Failed to update the product.')
+                messages.error(request, 'Failed to update the post.')
 
         else:
             form = PostForm(instance=post)
@@ -129,3 +129,11 @@ def edit_post(request, post_id):
     else:
         messages.error(request, "You are not allowed in this area.")
         return redirect(reverse('home'))
+
+
+def delete_post(request, post_id):
+    """ Delete a post from the store """
+    post = get_object_or_404(Post, pk=post_id)
+    post.delete()
+    messages.success(request, 'Post deleted!')
+    return redirect(reverse('blog'))

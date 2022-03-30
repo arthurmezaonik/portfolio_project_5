@@ -24,6 +24,7 @@
                     <div class="text-right">
                         <a class="btn text__bold text__white keep-shopping rounded-0 mt-1" href="{% url 'blog' %}">Cancel</a>
                         <button class="btn text__bold text__white keep-shopping rounded-0 mt-1" type="submit">Edit Post</button>
+                        <a class="btn text__bold text__white keep-shopping rounded-0 mt-1" style='background-color:red' href="{% url 'delete_post' post.id %}">Delete Post</a>
                     </div>
                 </form>
             </div>            

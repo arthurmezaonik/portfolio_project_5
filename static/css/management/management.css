@@ -1,0 +1,51 @@
+.btt-button{
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 50%;
+    background-color: #69b64f;
+    z-index: 10;
+}
+
+.product__grid,
+.posts__grid{
+    margin:0 auto;
+}
+
+.product__grid h2,
+.posts__grid h2{
+    padding:0;
+}
+
+.break__line{
+    max-width: 1200px;
+}
+
+@media only screen and (min-width:992px){
+    .admin__container{
+        padding-top:30px;
+    }
+}
+
+/* Settings icon */
+.post__card,
+.product__card{
+    position: relative;
+}
+
+.settings{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 26px;
+    text-decoration: none;
+    color: orange;
+    background-color: white;
+    padding: 0 5px 5px;
+}
+
+.settings:hover{
+    color: black;
+}

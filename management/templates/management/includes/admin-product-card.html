@@ -1,0 +1,23 @@
+<div class="product__card">
+    <div class="product__image-container">
+        {%if product.image %}
+            <img src="{{ product.image.url }}" alt="{{ product.title }}">
+        {% else %}
+            <img src="{{ MEDIA_URL }}no-image.jpg" alt="{{ product.title }}">
+        {% endif %}
+    </div>
+    <a href="{% url 'specific_product' product.id %}" title="{{ product.title }}" class="product__text text__black">
+        <h2 class="product__title text__captal">{{ product.title }}</h2>
+        {% if product.collection %}
+            <p class="product__collection"><i class="fas fa-tags"></i> {{ product.collection.friendly_name }}</p>
+        {% else %}
+            <p class="product__collection"><i class="fas fa-tags"></i> No Collection</p>
+        {% endif %}
+        <p class="product__calories">{{product.calories}} cal</p>
+        <p class="product__price">${{product.price}}</p>
+    </a>
+
+    <a href="#" class="settings">
+        <i class="fa fa-gear"></i>
+    </a>
+</div>

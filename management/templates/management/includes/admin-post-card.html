@@ -1,0 +1,24 @@
+<div class="post__card">
+    <div class="post__image-container">
+        {%if post.featured_image %}
+            <img src="{{ post.featured_image.url }}" alt="{{ post.title }}">
+        {% else %}
+            <img src="{{ MEDIA_URL }}blog_image.jpg" alt="{{ post.title }}">
+        {% endif %}
+    </div>
+    <a href="{% url 'post' post.slug %}" title="{{ post.title }}" class="post__text text__black">
+        <h2 class="post__title text__captal">{{ post.title }}</h2>
+        <p class="post__excerpt"><strong>Status:</strong> {% if post.status == 0%}Draft{% else %}Published{% endif %}</p>
+        {% if post.excerpt != "" %}
+            <p class="post__excerpt">{{ post.excerpt }}</p>
+        {% else %}
+            <div class="post__excerpt">{{ post.content | truncatewords_html:30 | safe}}</div>
+        {% endif %}
+        <p class="post__author"><i class="fas fa-user"></i> {{post.author}}</p>
+        <p class="post__publication"><i class="fas fa-calendar"></i> {{post.created_on}}</p>
+    </a>
+
+    <a href="#" class="settings">
+        <i class="fa fa-gear"></i>
+    </a>
+</div>

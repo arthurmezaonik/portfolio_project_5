@@ -107,7 +107,37 @@ def create_product(request):
             'form': form,
         }
         return render(request, 'products/create_product.html', context)
-    
+
+    else:
+        messages.error(request, "You are not allowed in this area.")
+        return redirect(reverse('home'))
+
+
+def edit_product(request, product_id):
+    """Edit a product"""
+
+    if request.user.is_staff or request.user.is_superuser:
+
+        product = get_object_or_404(Product, pk=product_id)
+
+        if request.method == 'POST':
+            form = ProductForm(request.POST, request.FILES, instance=product)
+            if form.is_valid():
+                product = form.save(commit=False)
+                product.save()
+                messages.success(request, 'Product edited successfully!')
+                return redirect(reverse('specific_product', args=[product.id]))
+            else:
+                messages.error(request, 'Failed to update the product.')
+
+        else:
+            form = ProductForm(instance=product)
+
+        context = {
+            'form': form,
+        }
+        return render(request, 'products/edit_product.html', context)
+
     else:
         messages.error(request, "You are not allowed in this area.")
         return redirect(reverse('home'))

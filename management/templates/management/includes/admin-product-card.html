@@ -17,7 +17,7 @@
         <p class="product__price">${{product.price}}</p>
     </a>
 
-    <a href="#" class="settings">
+    <a href="{% url 'edit_product' product.id %}" class="settings">
         <i class="fa fa-gear"></i>
     </a>
 </div>

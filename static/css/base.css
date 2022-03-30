@@ -146,22 +146,39 @@
 
 /* MAIN */
 main{
-    min-height: calc(100vh - 194px);;
+    min-height: calc(100vh - 274px);;
 }
 
 @media only screen and (min-width:768px){
     main{
-        min-height: calc(100vh - 136px);
+        min-height: calc(100vh - 178px);
     }
 }
 
 @media only screen and (min-width:992px){
     main{
-        min-height: calc(100vh - 168px);
+        min-height: calc(100vh - 210px);
     }
 }
 
 /* FOOTER */
 .footer{
     background-color: #ffa500;
+}
+
+.newsletter__form{
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.newsletter__form > .row{
+    align-items: center;
+}
+
+.newsletter__btn{
+    text-align: center;
+}
+
+.newsletter__btn > button{
+    background-color: black;
 }

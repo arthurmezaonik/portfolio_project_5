@@ -1,4 +1,23 @@
 <footer class="footer container-fluid mt-auto py-1 bg-gradient">
+    <div class="row">
+        <div class="col">
+            <form class='newsletter__form' method="POST" action="{% url 'sign_up' %}">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col-12 col-md-9 email__field">
+                        <div class="input-group">
+                            <span class="input-group-text rounded-0" id="basic-addon1">@</span>
+                            <input type="email" class="form-control rounded-0" name="newsletter" placeholder="Newslleter Sign Up" aria-label="Email"
+                                aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 newsletter__btn">
+                        <button type="submit" class="btn text__bold text__white rounded-0 mt-1">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
     <p class="m-0 text-center text-white">Made by Arthur Martins</p>
     <p class="m-0 text-center">
         <a class="social-btn text-white" href="https://github.com/" target='_blank' rel="noopener" aria-label="Visit my Github page"><i class="fab fa-github"></i></a>

@@ -3,7 +3,7 @@
         {%if product.image %}
             <img src="{{ product.image.url }}" alt="{{ product.title }}">
         {% else %}
-            <img src="/media/no-image.jpg" alt="{{ product.title }}">
+            <img src="{{ MEDIA_URL }}no-image.jpg" alt="{{ product.title }}">
         {% endif %}
     </div>
     <a href="{% url 'specific_product' product.id %}" title="{{ product.title }}" class="product__text text__black">

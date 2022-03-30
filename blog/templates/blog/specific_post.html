@@ -19,7 +19,7 @@
                         {%if post.featured_image %}
                             <img src="{{ post.featured_image.url }}" alt="{{ post.title }}">
                         {% else %}
-                            <img src="/media/blog_image.jpg" alt="{{ post.title }}">
+                            <img src="{{ MEDIA_URL }}blog_image.jpg" alt="{{ post.title }}">
                         {% endif %}
                     </div>
                 </div>

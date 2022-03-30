@@ -30,12 +30,10 @@ class ReviewAdmin(admin.ModelAdmin):
         'body',
         'product',
         'created_on',
-        'approved'
     )
 
     list_filter = (
-        'approved',
-        'created_on'
+        'created_on',
     )
 
     search_fields = (
@@ -43,11 +41,6 @@ class ReviewAdmin(admin.ModelAdmin):
         'email',
         'body'
     )
-
-    actions = ['approve_comments']
-
-    def approve_comments(self, request, queryset):
-        queryset.update(approved=True)
 
 
 admin.site.register(Product, ProductAdmin)

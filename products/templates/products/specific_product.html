@@ -98,15 +98,13 @@
                 {% if reviews %}
                     <h3 class="review__title">{{product.title}} - Reviews</h3>
                         {% for review in reviews %}
-                            {% if review.approved%}
-                                {% if forloop.counter|divisibleby:2 %}
-                                    <div class="row review">
-                                 {% else %}
-                                    <div class="row review review__orange-bg">
-                                {% endif %}
-                                        {% include 'products/includes/review-content.html'%}
-                                    </div>
+                            {% if forloop.counter|divisibleby:2 %}
+                                <div class="row review">
+                            {% else %}
+                                <div class="row review review__orange-bg">
                             {% endif %}
+                                    {% include 'products/includes/review-content.html'%}
+                                </div>
                         {% endfor %}
                 {% else %}
                     <h3 class="review__title">This Product Has No Reviews</h3>
@@ -116,7 +114,7 @@
 
             <div class="form__review">
                 {% if reviewed %}
-                    <p>Review Submitted. Your review will be verified before approval.</p>
+                    <p>Review Submitted.</p>
                 {% else %}
                     {% if request.user.is_authenticated %}
                         <form action="" method="POST">

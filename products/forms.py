@@ -22,7 +22,7 @@ class ReviewForm(forms.ModelForm):
 
 
 class ProductForm(forms.ModelForm):
-
+    """ Form to create a product """
     class Meta:
         model = Product
         fields = '__all__'

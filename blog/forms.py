@@ -1,4 +1,4 @@
-from .models import Comment
+from .models import Comment, Post
 from django import forms
 
 
@@ -19,3 +19,10 @@ class CommentForm(forms.ModelForm):
                 'placeholder': 'Write your comment here:',
             }),
         }
+
+
+class PostForm(forms.ModelForm):
+    """ Form to create a blog post """
+    class Meta:
+        model = Post
+        fields = ('title', 'excerpt', 'content', 'featured_image', 'status')

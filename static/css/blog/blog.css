@@ -292,3 +292,8 @@
 .btn.text__white{
     background-color: black;
 }
+
+/* Create Blog */
+.create__form{
+    justify-content: center;
+}

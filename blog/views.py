@@ -1,9 +1,9 @@
-from django.shortcuts import render, get_object_or_404, HttpResponse
+from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.db.models.functions import Lower
 from .models import Post, Comment
-from .forms import CommentForm
+from .forms import CommentForm, PostForm
 
 
 def blog(request):
@@ -36,9 +36,9 @@ def blog(request):
     return render(request, 'blog/all_posts.html', context)
 
 
-def specific_post(request, slug):
+def specific_post(request, post_id):
     """A view to render a specific blog post"""
-    post = get_object_or_404(Post, slug=slug)
+    post = get_object_or_404(Post, pk=post_id)
     commented = False
     comments = Comment.objects.filter(post=post.id)
 
@@ -73,3 +73,28 @@ def specific_post(request, slug):
     }
 
     return render(request, 'blog/specific_post.html', context)
+
+
+def create_post(request):
+    """Create a new post"""
+
+    if request.user.is_staff or request.user.is_superuser:
+        if request.method == 'POST':
+            form = PostForm(request.POST, request.FILES)
+            if form.is_valid():
+                post = form.save(commit=False)
+                post.author = request.user
+                post.save()
+                messages.success(request, 'Post created successfully!')
+                return redirect(reverse('create_post'))
+        else:
+            form = PostForm()
+
+        context = {
+            'form': form,
+        }
+        return render(request, 'blog/create_post.html', context)
+
+    else:
+        messages.error(request, "You are not allowed in this area.")
+        return redirect(reverse('home'))

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/blog/blog.css' %}">
+{% endblock %}
+
+{% block extra_title %}
+    - Create Post
+{% endblock %}
+
+{% block content %}
+<main>
+    <div class="container-fluid fix__position posts__container">
+        <h1 class="text__captal page__header text__orange">
+            Create Product
+        </h1>
+
+        <div class="row create__form">
+            <div class="col-12 col-md-4">
+                <form method="POST" action="#" class="form mb-2" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <div class="text-right">
+                        <a class="btn text__bold text__white keep-shopping rounded-0 mt-1" href="{% url 'blog' %}">Cancel</a>
+                        <button class="btn text__bold text__white keep-shopping rounded-0 mt-1" type="submit">Add Product</button>
+                    </div>
+                </form>
+            </div>            
+        </div>
+    </div>
+</main>
+{% endblock %}

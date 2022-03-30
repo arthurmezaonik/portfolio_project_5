@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/home/home.css' %}">
+{% endblock %}
+
+{% block content %}
+<main>
+    <div class="container-fluid fix__position home">
+        <div class="home-text__container error-text__container px-2 opacity">
+            <h1 class="text__captal">Sorry, this page don't exist.</h1>
+            <h2 class="error__message">Here you can find some useful links:</h2>
+            <ul class="error__list">
+                <li>
+                    <a class='error__links' href="{{ url 'home' }} " aria-label="Home page" title="Home Page">Home Page</a>
+                </li>
+                <li>
+                    <a class='error__links' href="{{ url 'products' }}" aria-label="Products page" title="ProductPage">Products Page</a>
+                </li>
+                <li>
+                    <a class='error__links' href="{{ url 'blog' }}" aria-label="Blog page" title="Blog Page">Blog Page</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+{% endblock %}

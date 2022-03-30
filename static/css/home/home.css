@@ -89,3 +89,26 @@
         font-size: 70px;
     }
 }
+
+/* 404 page */
+.error-text__container{
+    justify-content: center;
+}
+
+.error__message{
+    text-align: center;
+}
+
+.error__list{
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.error__links{
+    color:black
+}
+
+.error__links:hover{
+    color:#0d6efd
+}

@@ -15,11 +15,11 @@
         <div class="row specific__product-container">
             <div class="col-12 col-sm-6 specific__img-container">
                 {% if product.image %}
-                    <a href="{{ product.image.url }}" target="_blank">
+                    <a href="{{ product.image.url }}"  alt='{{product.name}} image' target="_blank">
                         <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                     </a>
                 {% else %}
-                    <a href="">
+                    <a href="https://res.cloudinary.com/dfdbbn8jo/image/upload/v1648683520/media/no-image_czysct.jpg" alt='{{product.name}} image'>
                         <img class="card-img-top img-fluid" src="https://res.cloudinary.com/dfdbbn8jo/image/upload/v1648683520/media/no-image_czysct.jpg" alt="{{ product.name }}">
                     </a>
                 {% endif %}
@@ -29,7 +29,7 @@
                 <p class="specific__product-calories">{{ product.calories }} cal</p>
                 <p class="specific__product-price">${{ product.price }}</p>
                 {% if product.collection %}
-                    <a class="specific__product-collection text__orange" href="{% url 'products' %}?collection={{ product.collection.name }}" title="{{ product.collection.friendly_name }} page">
+                    <a class="specific__product-collection text__green" href="{% url 'products' %}?collection={{ product.collection.name }}" title="{{ product.collection.friendly_name }} page">
                         <i class="fas fa-tag mr-1"></i> {{ product.collection.friendly_name }}
                     </a>
                 {% endif %}
@@ -45,7 +45,7 @@
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <button class="decrement-qty btn text__white rounded-0 decrement-qty_{{ product.id }}"
-                                            data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
+                                            data-item_id="{{ product.id }}" name='decrement_button' id="decrement-qty_{{ product.id }}">
                                             <span class="icon">
                                                 <i class="fas fa-minus"></i>
                                             </span>
@@ -55,7 +55,7 @@
                                         min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
                                     <div class="input-group-append">
                                         <button class="increment-qty btn text__white rounded-0 increment-qty_{{ product.id }}"
-                                            data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
+                                            data-item_id="{{ product.id }}" name='increment_button' id="increment-qty_{{ product.id }}">
                                             <span class="icon">
                                                 <i class="fas fa-plus"></i>
                                             </span>
@@ -68,11 +68,11 @@
                         <div class="col form__submit-btns">
                             <div class="row mt-4 w-sm-50">
                                 <div class="col-12">
-                                    <input id='bag' type="submit" class="btn text__white text__bold bag rounded-0 text-uppercase"
+                                    <input id='bag' type="submit" class="btn text__black text__bold bag rounded-0 text-uppercase"
                                         value="Add to Bag">
                                 </div>
                                 <div class="col-12">
-                                    <a href="{% url 'products' %}" class="btn text__bold text__white keep-shopping rounded-0 mt-1">
+                                    <a href="{% url 'products' %}" class="btn text__bold text__black keep-shopping rounded-0 mt-1">
                                         <span class="icon">
                                             <i class="fas fa-chevron-left"></i>
                                         </span>
@@ -92,7 +92,7 @@
         <div class="container review__container">
             <div class="customer__reviews">
                 {% if reviews %}
-                    <h3 class="review__title">{{product.title}} - Reviews</h3>
+                    <h2 class="review__title">{{product.title}} - Reviews</h2>
                         {% for review in reviews %}
                             {% if forloop.counter|divisibleby:2 %}
                                 <div class="row review">

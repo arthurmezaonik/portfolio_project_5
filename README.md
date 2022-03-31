@@ -85,17 +85,25 @@ The post images were chosen to represent the post related.
 
 ### Initial Mobile
 
+[Mobile Wireframe](https://drive.google.com/file/d/1gLnhB46L9SDnxnSY61gph2sBDCR5KkKZ/view?usp=sharing)
+
 ### Initial Desktop
+
+[Desktop Wireframe](https://drive.google.com/file/d/1ct4oan_9gBaWTj5ktf-OG7Q7vjcYJriN/view?usp=sharing)
 
 ## ERD
 
-![ERD](static/images/readme/#)
+[ERD](https://drive.google.com/file/d/1WYaKM_AtrgNDU4KXwoscfF7YncpBS7dS/view?usp=sharing)
 
 ## Agile Process
 
 ### Github User Stories
 
+[Created Epic And User Stories](https://github.com/arthurmezaonik/portfolio_project_5/issues)
+
 ### Kanban Board
+
+[Kanban Board](https://github.com/arthurmezaonik/portfolio_project_5/projects/2)
 
 
 
@@ -171,15 +179,31 @@ The post images were chosen to represent the post related.
 
 * No bugs remaining
 
-## Agile
+## E-commerce Business Model
 
-### User Stories
+### Facebook Business Page
 
-[Created Epic And User Stories](https://github.com/arthurmezaonik/new_portfolio_project_04/issues)
+[Facebook Business Page](https://www.facebook.com/Fit-At-Home-104447422230293)
 
-### Kanban Board
+![Facebook 1](static/images/readme/facebookpage.PNG)
 
-[Kanban Board](https://github.com/arthurmezaonik/new_portfolio_project_04/projects/1)
+![Facebook 2](static/images/readme/facebookpage2.PNG)
+
+### Newsletter Sign Up
+
+Used Mailchimp to add a newsletter for on the footer.
+
+![Newsletter](static/images/readme/newsletter.PNG)
+
+## SEO Strategy
+
+### Sitemap
+
+-  created sitemap.xml file to call out files that exist so browsers can easily crawl site
+
+### Robots.txt
+
+- created robots.txt file to restrict pages that are should be searched by google, authentication and others are blocked to only allow relevant pages to be searched by google
 
 ## Deployment
 
@@ -216,9 +240,9 @@ This application will be deployed via [Heroku](https://heroku.com)
 
 1.	Navigate to "Settings" and scroll down to "config vars".
 
-    - That’s where you would store sensitive data that needs to kept secret. On my case my file SECRET_KEY, DATABASE_URL, CLOUDINARY_URL.
+    - That’s where you would store sensitive data that needs to kept secret. On my case my vars SECRET_KEY, DATABASE_URL, CLOUDINARY_URL, EMAIL_HOST_PASS, EMAIL_HOST_USER, STRIPE_PUBLIC_KEY, STRIPE_SECRET_KEY, STRIPE_WH_SECRET.
 
-2. Click "Reveal Config Var", in the field key I entered the CREDS word and in the value field I copied the content as past there.
+2. Click "Reveal Config Var", in the field key I entered the vars word and in the value field I copied the content as past there.
 
 ### App Deployment
 
@@ -242,30 +266,36 @@ This application will be deployed via [Heroku](https://heroku.com)
 
 ### Acknowledgments
 
-* Code Institute: I think therefore I blog Project
-
-* Youtube channel Codemy
-
-    - Used Django lesson videos
+* Code Institute: 'I think therefore I blog' project, 'Boutique Ado' project
 
 * Malia Havlicek: Reviewing and giving suggestions how to improve my project.
 
 ### Media
 
-* Plumber Image: https://www.independent.co.uk/life-style/plumber-invoice-elderly-burnley-uk-james-anderson-free-depher-a9109146.html
+* Home page image: https://thespoon.tech/territory-foods-lets-restaurants-package-pre-made-meals-for-subscription-delivery/
 
-* Electrician Image: https://www.tws.edu/blog/skilled-trades/is-becoming-an-electrician-a-good-career-choice/
+* Product No Image: https://en.wikipedia.org/wiki/File:Noimage.svg
 
-* Small Repairs Image: https://fixer.com/basic-tools-homeowners-should-have-for-small-repairs/
+* Post No Image: https://drivebywebsites.co.uk/2017/06/28/what-are-the-benefits-of-a-blog/
 
-* Flooring Image: https://www.popularmechanics.com/home/interior-projects/how-to/a9384/8-tips-for-laying-a-plastic-laminate-floor-15903907/
+* Caprese Salad: https://www.pinterest.at/Maigris/food-salads-way-beyond-an-iceberg-wedge/
 
-* Painting Image: https://www.2dodone.com/blog/ins-outs-proper-painting-job/
+* Caponata: https://www.foodandwine.com/recipes/eggplant-caponata
 
-* Cleaner Image: https://theconversation.com/whats-the-school-cleaners-name-how-kids-not-just-cleaners-are-paying-the-price-of-outsourcing-115443
+* Strogonoff: https://rapidolight.com.br/produto/strogonoff-de-carne-light/
 
-* Other Services Image: https://www.bestinsingapore.co/best-handyman-singapore/
+* Sole To Belle Meunière: https://en.tripadvisor.com.hk/LocationPhotoDirectLink-g303506-d787028-i467368828-Restaurante_Garota_de_Ipanema-Rio_de_Janeiro_State_of_Rio_de_Janeiro.html
 
-* Publish Image: https://www.istockphoto.com/pt/vetorial/multitasking-construction-worker-gm977762380-265820198
+* Grilled Tuna: https://www.libergas.com.br/atum-grelhado/
 
-* Find Image: https://www.istockphoto.com/vector/laptop-and-hands-on-the-keyboard-gm926105800-254122512
+* Coq Au Vin: https://searchingforspice.com/coq-au-vin/
+
+* Grilled Chicken: https://cybercook.com.br/receitas/aves/file-de-frango-grelhado-85340
+
+* Pork Chops: https://cocinarrecetasdepostres.net/po/costeletas-de-porco-grelhadas-na-frigideira-com-alho-e-verduras/
+
+* Roas Loin: https://www.tvgazeta.com.br/receitas/lombo-assado-com-cebola-caramelizada-e-abacaxi
+
+* Ratatouille: https://www.cookingclassy.com/ratatouille/
+
+* Moroccan Rice: https://br.recepedia.com/receita/arroz/215107-arroz-marroquino/

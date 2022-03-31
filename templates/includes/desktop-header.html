@@ -4,7 +4,7 @@
         
         <ul class="list-inline list-unstyled text-center text-lg-right my-0">
             <li class="list-inline-item dropdown">
-                <a class="nav-link text__orange" href="#" id="user-options" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link text__green" href="#" id="user-options" data-bs-toggle="dropdown" aria-expanded="false">
                     <div class="text-center">
                         <div><i class="fas fa-user fa-lg"></i></div>
                         <p class="my-0">My Account</p>
@@ -24,7 +24,7 @@
                 </div>
             </li>
             <li class="list-inline-item">
-                <a class="nav-link text__orange" href="{% url 'view_bag' %}">
+                <a class="nav-link text__green" href="{% url 'view_bag' %}">
                     <div class="text-center">
                         <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                         <p class="my-0">
@@ -52,7 +52,7 @@
             <form action="{% url 'search' %}" method="GET" class="d-flex">
                 {% csrf_token %}
                 <input class="form-control me-2" type="search" name="q" placeholder="Search" aria-label="Search">
-                <button class="btn text__orange" type="submit">
+                <button class="btn text__green" name='search_btn' type="submit">
                     <span class="icon">
                         <i class="fas fa-search"></i>
                     </span>

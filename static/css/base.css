@@ -4,7 +4,7 @@
 }
 
 .text__green{
-    color:#538f3f !important;
+    color:#4C833A !important;
 }
 
 .text__black{
@@ -168,6 +168,10 @@ main{
 /* FOOTER */
 .footer{
     background-color: #ffa500;
+}
+
+.soacial-links{
+    font-size:22px;
 }
 
 .newsletter__form{

@@ -6,7 +6,7 @@
             <img src="https://res.cloudinary.com/dfdbbn8jo/image/upload/v1648683520/media/blog_image_aupglb.jpg" alt="{{ post.title }}">
         {% endif %}
     </div>
-    <a href="{% url 'post' post.slug %}" title="{{ post.title }}" class="post__text text__black">
+    <a href="{% url 'post' post.id %}" title="{{ post.title }}" class="post__text text__black">
         <h2 class="post__title text__captal">{{ post.title }}</h2>
         {% if post.excerpt != "" %}
             <p class="post__excerpt">{{ post.excerpt }}</p>

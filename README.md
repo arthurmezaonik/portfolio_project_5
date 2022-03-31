@@ -1,6 +1,6 @@
 # Fit At Home
 
-![Mobile Header](static/images/readme/#)
+![Mobile Header](static/images/readme/logo.PNG)
 
 https://fit-at-home.herokuapp.com/
 
@@ -10,6 +10,46 @@ Arthur Henrique El Mezaonik Martins
 
 ## Table of Contents
 
+- [Fit At Home](#fit-at-home)
+  * [Author](#author)
+  * [Table of Contents](#table-of-contents)
+  * [Project Overview](#project-overview)
+  * [UX](#ux)
+  * [Target Audience](#target-audience)
+  * [Design Choices](#design-choices)
+    + [Colors](#colors)
+    + [Images](#images)
+    + [Design Elements](#design-elements)
+    + [Animations and Transitions](#animations-and-transitions)
+    + [Frameworks](#frameworks)
+  * [Wireframes](#wireframes)
+    + [Initial Mobile](#initial-mobile)
+    + [Initial Desktop](#initial-desktop)
+  * [ERD](#erd)
+  * [Agile Process](#agile-process)
+    + [Github User Stories](#github-user-stories)
+    + [Kanban Board](#kanban-board)
+  * [Testing](#testing)
+    + [Validation Testing](#validation-testing)
+    + [Manual Testing](#manual-testing)
+    + [Bugs](#bugs)
+    + [Unifxed Bugs](#unifxed-bugs)
+  * [E-commerce Business Model](#e-commerce-business-model)
+    + [Facebook Business Page](#facebook-business-page)
+    + [Newsletter Sign Up](#newsletter-sign-up)
+  * [SEO Strategy](#seo-strategy)
+    + [Sitemap](#sitemap)
+    + [Robots.txt](#robotstxt)
+  * [Deployment](#deployment)
+    + [Creating App.](#creating-app)
+    + [Setting up database](#setting-up-database)
+    + [Setting up Heroku App](#setting-up-heroku-app)
+    + [App Deployment](#app-deployment)
+  * [Credits](#credits)
+    + [Acknowledgments](#acknowledgments)
+    + [Media](#media)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 ## Project Overview
 
@@ -45,7 +85,7 @@ The main colors are green and orange, they were chosen to give the impression fr
 
 The other colors used are mainly black and white, to give a good contrast with the main colors.
 
-![Color Pallet](static/images/readme/#)
+![Color Pallet](static/images/readme/color_pallet.PNG)
 
 ### Images
 
@@ -105,79 +145,47 @@ The post images were chosen to represent the post related.
 
 [Kanban Board](https://github.com/arthurmezaonik/portfolio_project_5/projects/2)
 
-
-
 ## Testing
 
 ### Validation Testing
 
 * Lighthouse
 
-    - Before mobile:
+    ![Lighthouse errors](static/images/readme/lighthouse.PNG)
 
-    ![Lighthouse before mobile](static/images/readme/tests/mobile-report.PNG)
-
-    ![Lighthouse before mobile accessibility](static/images/readme/tests/mobile-accessibilityproblem.PNG)
-
-    ![Lighthouse before mobile seo](static/images/readme/tests/mobile-seoproblem.PNG)
-
-    - After mobile:
-
-    ![Lighthouse after mobile](static/images/readme/tests/mobile-reportfixed.PNG)
-
-    - Before desktop:
-
-    ![Lighthouse before desktop](static/images/readme/tests/desktop-report.PNG)
-
-    ![Lighthouse before desktop accessibility](static/images/readme/tests/desktop-accessibilityproblem.PNG)
-
-    ![Lighthouse before desktop seo](static/images/readme/tests/desktop-seoproblem.PNG)
-
-    - After desktop:
-
-    ![Lighthouse after desktop](static/images/readme/tests/desktop-reportfixed.PNG)
+    - All test pages result in SEO, Acessibility and SEO. Best Practices problems are related to missign favicon and Bootstrap toasts.
 
 * HTML Validation
 
-    - Before:
+    ![HTML warnings](static/images/readme/htmlerrors.PNG)
 
-    ![HTML Validation before](static/images/readme/tests/html-check.PNG)
-
-    - After:
-
-    ![HTML Validation after](static/images/readme/tests/html-checkfixed.PNG)
+    - All tested pages returned 0 problems, just some warnings.
 
 * CSS Validation
 
-    - Before:
-
-    ![CSS Validation before](static/images/readme/tests/css-check.PNG)
-
-    - After:
-
-    ![CSS Validation after](static/images/readme/tests/css-checkfixed.PNG)
+    - All custom css files tested and return 0 problems.
 
 * JS Validation
 
-    ![JS Validation ](static/images/readme/tests/js-check.PNG)
+    ![JS errors](static/images/readme/jserrors.PNG)
     
-    - This function is beeing used just on the html file, that's the reason I couldn't fix this erros.
+    - Custom JS codes tested and passed. Errors are related to jQuery syntax.
 
 * PEP 8
         
-    - No errors found. Files tested website.form.py, website.models.py, website.views.py, website.urls.py, and milestone04.urls.py.
+    - All python files were check via terminal with command python3 -m flake8. Only issues remaining are related to migration files.
 
 ### Manual Testing
 
-[Manual Test Worksheet](https://docs.google.com/spreadsheets/d/1bAlIK_KV-b2nTUmMAlzxKgcm_HXzy-OZRs0tYtHcEks/edit?usp=sharing)
+[Manual Test Worksheet](https://docs.google.com/spreadsheets/d/1HONufJy1f4soVv9XgvTSbkdYAIRkhs5QyIVhN0T5h3E/edit?usp=sharing)
 
 ### Bugs
 
-* No bugs reported
+* Checkout form not adding customer data automatically with saved information.
 
 ### Unifxed Bugs
 
-* No bugs remaining
+* Checkout form not adding customer data automatically with saved information.
 
 ## E-commerce Business Model
 

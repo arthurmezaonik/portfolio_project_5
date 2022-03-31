@@ -64,7 +64,7 @@
                         <p>Comment Submitted.</p>
                     {% else %}
                         {% if request.user.is_authenticated %}
-                            <form action="" method="POST">
+                            <form method="POST">
                                 {% csrf_token%}
     
                                 {{ comment_form.as_p }}

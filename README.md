@@ -1,108 +1,271 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Fit At Home
 
-Welcome arthurmezaonik,
+![Mobile Header](static/images/readme/#)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+https://fit-at-home.herokuapp.com/
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## Author
 
-## Gitpod Reminders
+Arthur Henrique El Mezaonik Martins
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Table of Contents
 
-`python3 -m http.server`
 
-A blue button should appear to click: _Make Public_,
+## Project Overview
 
-Another blue button should appear to click: _Open Browser_.
+Fit At Home's main target are those who have a healthy life and don't like to keep having fast food, but also don't have time or skills to cook nice and healthy food.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+But not just those guys can consume our product, our product is for everyone that wants to try a new food or simply doesn't know how to cook.
 
-A blue button should appear to click: _Make Public_,
+We offer appetizers and main plates, from Vegan food to a plate base on Beef or Pork, and you can have it all on your doorstep without the need to wash the pans after.
 
-Another blue button should appear to click: _Open Browser_.
+## UX
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+Our main target are those who have a healthy life and but don't have time or skills to cook nice and healthy food. To solve those problems we offer two things.
 
-To log into the Heroku toolbelt CLI:
+First is our menu which has a variety of healthy foods, where the costumer can choose between one of our colelctions (appetizer, beef, chicken, pork, fish and vegan) and receive the prepered food at home.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+The second is our blog page, where we will have posts teaching how to prepare a nice food, but not just that, also posts talking about healthy life and exercices.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+## Target Audience
 
-------
+1. Users that don't have time to prepare their healthy meal
 
-## Release History
+2. Users that have time to cook but don't know how to prepare a nice and healthy meal
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+3. Users looking for healthy food recipes
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+4. Users looking for tips about healthy life anf exerceise
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+## Design Choices
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+### Colors
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+The main colors are green and orange, they were chosen to give the impression from something healthier/natural.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+The other colors used are mainly black and white, to give a good contrast with the main colors.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+![Color Pallet](static/images/readme/#)
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### Images
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+The main image on the home page was chosen to represent that the site wants to bring information about food.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+The product images were chosen to represent the food related.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+The post images were chosen to represent the post related.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+### Design Elements
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+- desktop navigation
+- mobile navigation
+- footer
+- containers/cards
+- buttons
+- text input
+- textarea inputs
+- dropdowns
+- toasts
+- check boxes
+- images
+- icons
+- file pickers
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### Animations and Transitions
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+- There is a 'loading' animation on checkout page while the payment is being processed
 
-------
+### Frameworks
 
-## FAQ about the uptime script
+- Bootstrap 5
 
-**Why have you added this script?**
+- Jquery
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+## Wireframes
 
-**How will this affect me?**
+### Initial Mobile
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+### Initial Desktop
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+## ERD
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+![ERD](static/images/readme/#)
 
-**So….?**
+## Agile Process
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+### Github User Stories
 
-**Can I opt out?**
+### Kanban Board
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
 
-**Anything more?**
+## Testing
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+### Validation Testing
 
----
+* Lighthouse
 
-Happy coding!
+    - Before mobile:
+
+    ![Lighthouse before mobile](static/images/readme/tests/mobile-report.PNG)
+
+    ![Lighthouse before mobile accessibility](static/images/readme/tests/mobile-accessibilityproblem.PNG)
+
+    ![Lighthouse before mobile seo](static/images/readme/tests/mobile-seoproblem.PNG)
+
+    - After mobile:
+
+    ![Lighthouse after mobile](static/images/readme/tests/mobile-reportfixed.PNG)
+
+    - Before desktop:
+
+    ![Lighthouse before desktop](static/images/readme/tests/desktop-report.PNG)
+
+    ![Lighthouse before desktop accessibility](static/images/readme/tests/desktop-accessibilityproblem.PNG)
+
+    ![Lighthouse before desktop seo](static/images/readme/tests/desktop-seoproblem.PNG)
+
+    - After desktop:
+
+    ![Lighthouse after desktop](static/images/readme/tests/desktop-reportfixed.PNG)
+
+* HTML Validation
+
+    - Before:
+
+    ![HTML Validation before](static/images/readme/tests/html-check.PNG)
+
+    - After:
+
+    ![HTML Validation after](static/images/readme/tests/html-checkfixed.PNG)
+
+* CSS Validation
+
+    - Before:
+
+    ![CSS Validation before](static/images/readme/tests/css-check.PNG)
+
+    - After:
+
+    ![CSS Validation after](static/images/readme/tests/css-checkfixed.PNG)
+
+* JS Validation
+
+    ![JS Validation ](static/images/readme/tests/js-check.PNG)
+    
+    - This function is beeing used just on the html file, that's the reason I couldn't fix this erros.
+
+* PEP 8
+        
+    - No errors found. Files tested website.form.py, website.models.py, website.views.py, website.urls.py, and milestone04.urls.py.
+
+### Manual Testing
+
+[Manual Test Worksheet](https://docs.google.com/spreadsheets/d/1bAlIK_KV-b2nTUmMAlzxKgcm_HXzy-OZRs0tYtHcEks/edit?usp=sharing)
+
+### Bugs
+
+* No bugs reported
+
+### Unifxed Bugs
+
+* No bugs remaining
+
+## Agile
+
+### User Stories
+
+[Created Epic And User Stories](https://github.com/arthurmezaonik/new_portfolio_project_04/issues)
+
+### Kanban Board
+
+[Kanban Board](https://github.com/arthurmezaonik/new_portfolio_project_04/projects/1)
+
+## Deployment
+
+This application will be deployed via [Heroku](https://heroku.com)
+
+### Creating App.
+
+1. Ensure all code is correct and ready for deployment.
+
+2. Enter the following code to import the required dependencies to the requirements.txt file:
+    > pip3 freeze > requirements.txt
+
+    - Heroku will use this file to import the dependencies that are required.
+
+3. Log into or sign up to Heroku(it's free).
+
+    - If signing up, you will need to wait and accept an authentication email.
+
+4. Navigate to Dashboard. 
+
+5. Click "New" and select "create new app" from the drop-down menu. This is found in the upper right portion of the window.
+
+6. Provide a name for your application, this needs to be unique, and select your region.
+
+7. Click "Create App".
+
+### Setting up database
+
+1. Navigate to "Resources" and click on the field "add-ons".
+
+2. Add Heroku Postgres to the project.
+
+### Setting up Heroku App
+
+1.	Navigate to "Settings" and scroll down to "config vars".
+
+    - That’s where you would store sensitive data that needs to kept secret. On my case my file SECRET_KEY, DATABASE_URL, CLOUDINARY_URL.
+
+2. Click "Reveal Config Var", in the field key I entered the CREDS word and in the value field I copied the content as past there.
+
+### App Deployment
+
+1. Navigate to the "Deploy" section.
+
+2. Scroll down to "Deployment Method" and select "GitHub".
+
+3. Authorize the connection of Heroku to GitHub.
+
+4. Search for your GitHub repository name, and select the correct repository.
+
+5. For Deployment there are two options, Automatic Deployments or Manual.
+
+    - Automatic Deployment: This will prompt Heroku to re-build your app each time you push your code to GitHub.
+
+    - Manual Deployment: This will only prompt Heroku to build your app when you manually tell it to do so.
+
+6. Ensure the correct branch is selected "master/Main", and select the deployment method that you desire. In this case, I will be using Automatic Deployment
+
+## Credits
+
+### Acknowledgments
+
+* Code Institute: I think therefore I blog Project
+
+* Youtube channel Codemy
+
+    - Used Django lesson videos
+
+* Malia Havlicek: Reviewing and giving suggestions how to improve my project.
+
+### Media
+
+* Plumber Image: https://www.independent.co.uk/life-style/plumber-invoice-elderly-burnley-uk-james-anderson-free-depher-a9109146.html
+
+* Electrician Image: https://www.tws.edu/blog/skilled-trades/is-becoming-an-electrician-a-good-career-choice/
+
+* Small Repairs Image: https://fixer.com/basic-tools-homeowners-should-have-for-small-repairs/
+
+* Flooring Image: https://www.popularmechanics.com/home/interior-projects/how-to/a9384/8-tips-for-laying-a-plastic-laminate-floor-15903907/
+
+* Painting Image: https://www.2dodone.com/blog/ins-outs-proper-painting-job/
+
+* Cleaner Image: https://theconversation.com/whats-the-school-cleaners-name-how-kids-not-just-cleaners-are-paying-the-price-of-outsourcing-115443
+
+* Other Services Image: https://www.bestinsingapore.co/best-handyman-singapore/
+
+* Publish Image: https://www.istockphoto.com/pt/vetorial/multitasking-construction-worker-gm977762380-265820198
+
+* Find Image: https://www.istockphoto.com/vector/laptop-and-hands-on-the-keyboard-gm926105800-254122512

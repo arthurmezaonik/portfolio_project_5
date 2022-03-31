@@ -47,6 +47,10 @@
 }
 
 /* HEADER  AND NAVIGATION */
+header.fixed-top{
+    background-color: white;
+}
+
 #d__header{
     max-width: 1440px;
     margin: 0 auto;

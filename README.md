@@ -29,6 +29,21 @@ Arthur Henrique El Mezaonik Martins
   * [Agile Process](#agile-process)
     + [Github User Stories](#github-user-stories)
     + [Kanban Board](#kanban-board)
+  * [Features](#features)
+    + [Implemented Features](#implemented-features)
+      - [Header / Navigation](#header---navigation)
+      - [Footer](#footer)
+      - [User Area](#user-area)
+      - [Products Page](#products-page)
+      - [Specific Product Page](#specific-product-page)
+      - [Blog Page](#blog-page)
+      - [Specific Post Page](#specific-post-page)
+      - [Bag](#bag)
+      - [Checkout](#checkout)
+      - [Confirmation Page](#confirmation-page)
+      - [Admin area](#admin-area)
+      - [Email Confirmation](#email-confirmation)
+    + [Future Features](#future-features)
   * [Testing](#testing)
     + [Validation Testing](#validation-testing)
     + [Manual Testing](#manual-testing)
@@ -61,11 +76,11 @@ We offer appetizers and main plates, from Vegan food to a plate base on Beef or 
 
 ## UX
 
-Our main target are those who have a healthy life and but don't have time or skills to cook nice and healthy food. To solve those problems we offer two things.
+Our main target is those who have a healthy life but don't have time or skills to cook nice and healthy food. To solve those problems we offer two things.
 
-First is our menu which has a variety of healthy foods, where the costumer can choose between one of our colelctions (appetizer, beef, chicken, pork, fish and vegan) and receive the prepered food at home.
+First is our menu which has a variety of healthy foods, where the customer can choose between one of our collections (appetizer, beef, chicken, pork, fish, and vegan) and receive the prepared food at home.
 
-The second is our blog page, where we will have posts teaching how to prepare a nice food, but not just that, also posts talking about healthy life and exercices.
+The second is our blog page, where we will have posts teaching how to prepare nice food, but not just that, also posts talking about healthy life and exercises.
 
 ## Target Audience
 
@@ -75,13 +90,13 @@ The second is our blog page, where we will have posts teaching how to prepare a 
 
 3. Users looking for healthy food recipes
 
-4. Users looking for tips about healthy life anf exerceise
+4. Users looking for tips about healthy life and exercise
 
 ## Design Choices
 
 ### Colors
 
-The main colors are green and orange, they were chosen to give the impression from something healthier/natural.
+The main colors are green and orange, they were chosen to give the impression of something healthier/natural.
 
 The other colors used are mainly black and white, to give a good contrast with the main colors.
 
@@ -91,7 +106,7 @@ The other colors used are mainly black and white, to give a good contrast with t
 
 The main image on the home page was chosen to represent that the site wants to bring information about food.
 
-The product images were chosen to represent the food related.
+The product images were chosen to represent the food-related.
 
 The post images were chosen to represent the post related.
 
@@ -106,14 +121,14 @@ The post images were chosen to represent the post related.
 - textarea inputs
 - dropdowns
 - toasts
-- check boxes
+- checkboxes
 - images
 - icons
 - file pickers
 
 ### Animations and Transitions
 
-- There is a 'loading' animation on checkout page while the payment is being processed
+- There is a 'loading' animation on the checkout page while the payment is being processed
 
 ### Frameworks
 
@@ -145,6 +160,126 @@ The post images were chosen to represent the post related.
 
 [Kanban Board](https://github.com/arthurmezaonik/portfolio_project_5/projects/2)
 
+## Features
+
+### Implemented Features
+
+#### Header / Navigation
+
+![Mobile Header / Navigation](static/images/readme/m_header.PNG)
+
+* Contains all the main links to navigate on the website.
+
+* Is responsive to attend mobile, tablet, and desktop sizes.
+
+![Desktop Header / Navigation](static/images/readme/d_header.PNG)
+
+#### Footer
+
+![Mobile Footer](static/images/readme/m_footer.PNG)
+
+* Contain newsletter form.
+
+* Contain social links as Facebook Businesses
+
+* Is responsive to attend mobile, tablet, and desktop sizes.
+
+![Desktop Footer](static/images/readme/d_footer.PNG)
+
+#### User Area
+
+![User Area](static/images/readme/user_area.PNG)
+
+* Contain all the user delivery information.
+
+* Allow the user to update the information.
+
+* Display all the user order history
+
+#### Products Page
+
+![Products](static/images/readme/products.PNG)
+
+* Display all the created products with a link to the specific page
+
+* User can sort and filter products
+
+#### Specific Product Page
+
+![Specific Product](static/images/readme/specific_product.PNG)
+
+* Display all the product information
+
+* Display the product reviews
+
+* If logged in allow the user to leave a review
+
+* Link to add to bag
+
+#### Blog Page
+
+![Blog](static/images/readme/blog.PNG)
+
+* Display all the created posts with status published and give a link to the specific page.
+
+* User can sort posts by name.
+
+#### Specific Post Page
+
+![Specific Post](static/images/readme/specific_post.PNG)
+
+* Display all the post information
+
+* Display the post comments
+
+* If logged in allow the user to leave a comment
+
+#### Bag
+
+![Bag](static/images/readme/bag.PNG)
+
+* Display all the products that the user added to the bag
+
+* Display total order information
+
+* Allow the user to update quantity or delete items from the bag
+
+* Give the customer a link to the checkout page
+
+#### Checkout
+
+![Checkout](static/images/readme/checkout.PNG)
+
+* Display order summary
+
+* Display payment form
+
+* Allow the user to add a card payment to finish the purchase
+
+#### Confirmation Page
+
+![Confirmation Page](static/images/readme/order_confirmation.PNG)
+
+* Display an order summary to the user
+
+#### Admin area
+
+![Admin Area](static/images/readme/admin_area.PNG)
+
+* Admin can see all the products and posts created
+
+* Admin can create, update or delete products and posts
+
+#### Email Confirmation
+
+* After a purchase succeed a confirmation email is sent to the customer
+
+### Future Features
+
+* For future features, we hope to implement a way that the users can give a like to products and blog posts.
+
+* We also want to implement a way to send emails to customers that registered in our newsletter when a new blog post is published.
+
 ## Testing
 
 ### Validation Testing
@@ -153,7 +288,7 @@ The post images were chosen to represent the post related.
 
     ![Lighthouse errors](static/images/readme/lighthouse.PNG)
 
-    - All test pages result in SEO, Acessibility and SEO. Best Practices problems are related to missign favicon and Bootstrap toasts.
+    - All test pages result in SEO, Accessibility, and SEO. Best Practices problems are related to missing favicon and Bootstrap toasts.
 
 * HTML Validation
 
@@ -163,7 +298,7 @@ The post images were chosen to represent the post related.
 
 * CSS Validation
 
-    - All custom css files tested and return 0 problems.
+    - All custom CSS files were tested and returned 0 problems.
 
 * JS Validation
 
@@ -173,7 +308,7 @@ The post images were chosen to represent the post related.
 
 * PEP 8
         
-    - All python files were check via terminal with command python3 -m flake8. Only issues remaining are related to migration files.
+    - All python files were checked via terminal with command python3 -m flake8. The only issues remaining are related to migration files.
 
 ### Manual Testing
 
@@ -199,7 +334,7 @@ The post images were chosen to represent the post related.
 
 ### Newsletter Sign Up
 
-Used Mailchimp to add a newsletter for on the footer.
+I used Mailchimp to add a newsletter on the footer.
 
 ![Newsletter](static/images/readme/newsletter.PNG)
 
@@ -207,7 +342,7 @@ Used Mailchimp to add a newsletter for on the footer.
 
 ### Sitemap
 
--  created sitemap.xml file to call out files that exist so browsers can easily crawl site
+-  created sitemap.xml file to call out files that exist so browsers can easily crawl the site
 
 ### Robots.txt
 
@@ -248,9 +383,9 @@ This application will be deployed via [Heroku](https://heroku.com)
 
 1.	Navigate to "Settings" and scroll down to "config vars".
 
-    - That’s where you would store sensitive data that needs to kept secret. On my case my vars SECRET_KEY, DATABASE_URL, CLOUDINARY_URL, EMAIL_HOST_PASS, EMAIL_HOST_USER, STRIPE_PUBLIC_KEY, STRIPE_SECRET_KEY, STRIPE_WH_SECRET.
+    - That’s where you would store sensitive data that needs to be kept secret. On my case my vars SECRET_KEY, DATABASE_URL, CLOUDINARY_URL, EMAIL_HOST_PASS, EMAIL_HOST_USER, STRIPE_PUBLIC_KEY, STRIPE_SECRET_KEY, STRIPE_WH_SECRET.
 
-2. Click "Reveal Config Var", in the field key I entered the vars word and in the value field I copied the content as past there.
+2. Click "Reveal Config Var", in the field key I entered the vars word, and in the value field, I copied the content as past there.
 
 ### App Deployment
 
@@ -276,7 +411,7 @@ This application will be deployed via [Heroku](https://heroku.com)
 
 * Code Institute: 'I think therefore I blog' project, 'Boutique Ado' project
 
-* Malia Havlicek: Reviewing and giving suggestions how to improve my project.
+* Malia Havlicek: Reviewing and giving suggestions on how to improve my project.
 
 ### Media
 
@@ -302,7 +437,7 @@ This application will be deployed via [Heroku](https://heroku.com)
 
 * Pork Chops: https://cocinarrecetasdepostres.net/po/costeletas-de-porco-grelhadas-na-frigideira-com-alho-e-verduras/
 
-* Roas Loin: https://www.tvgazeta.com.br/receitas/lombo-assado-com-cebola-caramelizada-e-abacaxi
+* Roast Loin: https://www.tvgazeta.com.br/receitas/lombo-assado-com-cebola-caramelizada-e-abacaxi
 
 * Ratatouille: https://www.cookingclassy.com/ratatouille/
 

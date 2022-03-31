@@ -5,4 +5,9 @@ class SigneUp(models.Model):
     """
     Collect user email to receive newsletter
     """
-    email = models.EmailField(max_length=254, unique=True, null=False, blank=False)
+    email = models.EmailField(
+        max_length=254,
+        unique=True,
+        null=False,
+        blank=False
+    )

@@ -19,7 +19,18 @@
         </h1>
 
         <div class="row product__grid">
-            <h2>Products:</h2>
+            <div class="col-12">
+                <div class="row" style="margin-bottom:10px">
+                    <div class="col-12">
+                        <h2>Products:</h2>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <a href="{% url 'create_product' %}"
+                            class="btn text__bold text__white keep-shopping rounded-0 mt-1">Create Product</a>
+                    </div>
+                </div>
+            </div>
+            
             {% for product in products %}
                 <div class="col-6 col-md-4 col-lg-3 ">
                     {% include 'management/includes/admin-product-card.html'%}
@@ -30,7 +41,17 @@
         <hr class="break__line text__orange">
 
         <div class="row posts__grid">
-            <h2>Blog Posts:</h2>
+            <div class="col-12">
+                <div class="row" style="margin-bottom:10px">
+                    <div class="col-12">
+                        <h2>Blog Posts:</h2>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <a href="{% url 'create_post' %}"
+                            class="btn text__bold text__white keep-shopping rounded-0 mt-1">Create Post</a>
+                    </div>
+                </div>
+            </div>
             {% for post in posts %}
                 <div class="col-6 col-md-4 col-lg-3 ">
                     {% include 'management/includes/admin-post-card.html'%}

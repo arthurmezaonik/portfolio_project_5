@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://fit-at-home.herokuapp.com/</loc>
+  <lastmod>2022-03-31T02:03:18+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://fit-at-home.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2022-03-31T02:03:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fit-at-home.herokuapp.com/accounts/login/</loc>
+  <lastmod>2022-03-31T02:03:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fit-at-home.herokuapp.com/bag/</loc>
+  <lastmod>2022-03-31T02:03:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fit-at-home.herokuapp.com/products/?sort=price&amp;direction=asc</loc>
+  <lastmod>2022-03-31T02:03:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fit-at-home.herokuapp.com/products/?sort=collection&amp;direction=asc</loc>
+  <lastmod>2022-03-31T02:03:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fit-at-home.herokuapp.com/products/</loc>
+  <lastmod>2022-03-31T02:03:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fit-at-home.herokuapp.com/products/?collection=appetizer</loc>
+  <lastmod>2022-03-31T02:03:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fit-at-home.herokuapp.com/products/?collection=main_beef</loc>
+  <lastmod>2022-03-31T02:03:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fit-at-home.herokuapp.com/products/?collection=main_chicken</loc>
+  <lastmod>2022-03-31T02:03:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fit-at-home.herokuapp.com/products/?collection=main_fish</loc>
+  <lastmod>2022-03-31T02:03:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fit-at-home.herokuapp.com/products/?collection=main_pork</loc>
+  <lastmod>2022-03-31T02:03:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fit-at-home.herokuapp.com/products/?collection=main_vegan</loc>
+  <lastmod>2022-03-31T02:03:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fit-at-home.herokuapp.com/blog/</loc>
+  <lastmod>2022-03-31T02:03:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fit-at-home.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2022-03-31T02:03:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://fit-at-home.herokuapp.com/products/21</loc>
+  <lastmod>2022-03-31T02:03:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://fit-at-home.herokuapp.com/products/9</loc>
+  <lastmod>2022-03-31T02:03:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://fit-at-home.herokuapp.com/products/10</loc>
+  <lastmod>2022-03-31T02:03:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://fit-at-home.herokuapp.com/products/20</loc>
+  <lastmod>2022-03-31T02:03:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://fit-at-home.herokuapp.com/products/16</loc>
+  <lastmod>2022-03-31T02:03:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://fit-at-home.herokuapp.com/products/17</loc>
+  <lastmod>2022-03-31T02:03:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://fit-at-home.herokuapp.com/products/14</loc>
+  <lastmod>2022-03-31T02:03:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://fit-at-home.herokuapp.com/products/19</loc>
+  <lastmod>2022-03-31T02:03:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://fit-at-home.herokuapp.com/products/12</loc>
+  <lastmod>2022-03-31T02:03:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://fit-at-home.herokuapp.com/products/15</loc>
+  <lastmod>2022-03-31T02:03:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://fit-at-home.herokuapp.com/products/13</loc>
+  <lastmod>2022-03-31T02:03:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://fit-at-home.herokuapp.com/products/18</loc>
+  <lastmod>2022-03-31T02:03:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://fit-at-home.herokuapp.com/products/11</loc>
+  <lastmod>2022-03-31T02:03:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://fit-at-home.herokuapp.com/blog/4</loc>
+  <lastmod>2022-03-31T02:03:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://fit-at-home.herokuapp.com/blog/3</loc>
+  <lastmod>2022-03-31T02:03:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://fit-at-home.herokuapp.com/blog/2</loc>
+  <lastmod>2022-03-31T02:03:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://fit-at-home.herokuapp.com/blog/1</loc>
+  <lastmod>2022-03-31T02:03:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>

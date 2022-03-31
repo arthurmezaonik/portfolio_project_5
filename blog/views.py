@@ -54,7 +54,7 @@ def specific_post(request, post_id):
 
                 messages.success(request, 'Comment submitted')
                 return HttpResponseRedirect(
-                    f'{slug}?commented=True'
+                    f'{post_id}?commented=True'
                 )
         except Exception as e:
             messages.error(request, f'Error submitting your comment: {e}')
